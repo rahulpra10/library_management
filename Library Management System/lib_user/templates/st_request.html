@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Request</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="{% static 'fonts2/linearicons/style.css' %}">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="{% static 'css1/style.css' %}">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<img src="{% static 'images2/image-1.png' %}" alt="" class="image-1">
+				<form action="{% url 'st_request' %}" method="post" >
+					{% csrf_token %}
+					<h4 style="text-align:center; margin:10px 0px;">	{{massage}} </h4>
+					<h3>REQUEST FOR BOOK</h3>
+					<div class="form-holder">
+						<span class="lnr lnr-book"></span>
+						<input type="text" name="title" class="form-control" placeholder="Book Title">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-user"></span>
+						<input type="text" name="author" class="form-control" placeholder="Author">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-pencil"></span>
+						<input type="text" name="year" class="form-control" placeholder="Edition or Publication Year">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="text" name="deadline" class="form-control" placeholder="Any Deadlines">
+					</div>
+					
+					<button type="submit">
+						<span>SUBMIT</span>
+					</button>
+					
+				</form>
+				<img src="{% static 'images2/image-2.png' %}" alt="" class="image-2">
+			</div>
+			
+		</div>
+		
+		<script src="{% static 'js2/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static 'js2/main.js' %}"></script>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

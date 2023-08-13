@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v10 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="{% static 'fonts2/linearicons/style.css' %}">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="{% static 'css1/style.css' %}">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<img src="{% static 'images2/image-1.png' %}" alt="" class="image-1">
+				<form action="{% url 'st_signup' %}" method="post"  enctype="multipart/form-data">
+					{% csrf_token %}
+					<h4 style="text-align:center;">	{{massage}} </h4>
+					<h3>SIGN UP</h3>
+					
+					<div class="form-holder">
+						<span class="lnr lnr-envelope"></span>
+						<input type="text" name="email" class="form-control" placeholder="Mail" required>
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="password" name="pass" class="form-control" placeholder="Password">
+					</div>
+					
+					<button type="submit">
+						<span>Sign Up</span>
+					</button>
+					<h4 style="text-align:center; margin-top:10px;">Not Register, <a href="{% url 'st_login' %}">  Register </a></h4>
+				</form>
+				<img src="{% static 'images2/image-2.png' %}" alt="" class="image-2">
+			</div>
+			
+		</div>
+		
+		<script src="{% static 'js2/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static 'js2/main.js' %}"></script>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

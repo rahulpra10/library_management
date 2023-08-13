@@ -1,0 +1,68 @@
+
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Renewal</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/icon" href="{% static 'images/favicon.ico' %}"/>
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Slick slider -->
+    <link href="{% static 'css/slick.css' %}" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="{% static 'css/theme-color/default-theme.css' %}" rel="stylesheet">
+
+    <!-- Main Style -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+	
+    <!-- Fonts -->
+
+    <!-- Open Sans for body font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+    <!-- Lato for Title -->
+  	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+ 
+ 
+    </head>
+
+    <body>
+      <h3 style="text-align:center;padding:20px;"> Renewal books</h3>
+      <div style="padding:60px; background-color:black;color:white; margin:10px;border-radius:20px;">
+       
+        <div class="container" >
+            <table class="table" >
+              <thead class="thead-dark">
+                <tr >
+                  <th class="" scope="col">Book Name</th>
+                  <th class="" scope="col">User ID</th>
+                  <th class="" scope="col">Issue Date</th>
+                </tr>
+              </thead>
+              <tbody id="table_data">
+                {% for book in books %}
+                <tr>
+                  <td>{{book.book_name}}</td>
+                  <td>{{book.user_id}}</td>
+                  <td>{{book.issue_date}}</td>
+                  <td> </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+           </div>
+          </div>
+        <!-- / Boo
+        
+        <script src="" async defer></script>
+    </body>
+</html>
